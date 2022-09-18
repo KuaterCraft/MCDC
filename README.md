@@ -1,67 +1,53 @@
-<img src="https://i.imgur.com/POnNBZX.png" width="100%">
+<img src="https://i.imgur.com/MxTeS95h.jpg" height="30%">
 
-# MCPEDiscordRelay
-<a href="https://poggit.pmmp.io/p/MCPEDiscordRelay"><img src="https://poggit.pmmp.io/shield.state/MCPEDiscordRelay"></a>
+# MCDC
 [![License](https://img.shields.io/github/license/nomadjimbob/MCPEDiscordRelay?color=green)](https://github.com/nomadjimbob/MCPEDiscordRelay/LICENSE)
-[![Downloads](https://poggit.pmmp.io/shield.dl.total/MCPEDiscordRelay)](https://poggit.pmmp.io/p/MCPEDiscordRelay)
-[![Version](https://img.shields.io/github/v/release/nomadjimbob/MCPEDIscordRelay)](https://github.com/nomadjimbob/MCPEDiscordRelay/releases/latest)
-[![Donate to this project using Paypal](https://img.shields.io/badge/paypal-donate-yellow.svg)](https://www.paypal.me/nomadjimbob)
-[![Donate to this project using Ko-Fi](https://img.shields.io/badge/kofi-donate-yellow.svg)](https://www.ko-fi.com/nomadjimbob)
+[![Version](https://img.shields.io/github/v/release/KuaterCraft/MCDC)](https://github.com/KuaterCraft/MCDC/releases/latest)
+[Discord](https://discord.gg/zQ3SQ4zzN5)
 
 
-### Connect your Minecraft PocketMine server chat and console to a Discord channel.
+### Send console logs to your discord using webhook
 
 * Outputs player chat and commands to a Discord channel
-* Option to output the console to the same Discord channel
- 
 
-## Start
+## How to start
 
-<img align="right" src="https://i.imgur.com/3ijsHmh.png" width="30%">
+1. Download the latest release and place it in your plugins folder
+2. Restart your server.
+3. Go to plugin data folder
+4. Open your Discord server
+5. Create a channel where the logs should be send
+6. Go to server settings -> integrations -> webhook -> create one for logs -> redirect the webhook to the log channel
+7. Copy the webhook url
+8. Go to the MCDC config.yml
+9. paste it in the discord_webhook_url ""
+10. Restart Your server
 
-It's is easy to get going...
-
-1. [Download the latest release](https://github.com/nomadjimbob/MCPEDiscordRelay/releases/download/v1.0.8/MCPEDiscordRelay.phar.zip) and place it in your plugins folder
-2. Restart your Minecraft server. This will create a MCPEDiscordRelay folder containing the config.yml file in your plugins folder
-3. Open your Discord server and create or open a chat channel
-4. Click on the settings icon beside your chat channel name
-5. Click Webhooks and New
-6. Click "Copy" under the Webhook URL
-7. In the config.yml file, paste the Webhook URL in the discord_webhook_url option
-8. Restart your Minecraft server
-
-You should now see your server outputting to your Discord channel.
+You should now see your server console logs
 
 ## Getting help
 
-If you think you have found a problem, or would like to see a feature, please [open an issue](https://github.com/nomadjimbob/MCPEDiscordRelay/issues).
-
-Features for the next release can be found in the [next release TODO issue](https://github.com/nomadjimbob/MCPEDiscordRelay/issues/8).
-
-If you are a coder, feel free to create a pull request, but please be detailed about your changes!
+Need help? join our [Discord](https://discord.gg/zQ3SQ4zzN5)
 
 ## Detailed configuration
-* **enabled** (true|false) - If the plugin is to be loaded or not
-* **discord_webhook_url** (string) - The Discord Webhook URL to use when connecting to Discord
-* **discord_webhook_name** (string) - The username the plugin uses in Discord
-* **discord_webhook_refresh** (number) - The amount of seconds to wait before updating Discord. Setting this number too low may cause Discord to take spam action
-* **discord_webhook_override** (true|false) - The plugin verifies the Discord Webhook URL against its own internal checks. If the plugin thinks your Webhook URL is wrong, it will disable itself. If you know better, set this to true to override the check
-* **send_console** (true|false) - The default is to just send player chat and commands to Discord. If you would like to also send the servers console, set this to true
-* **show_player_events** (true|false) - Send when a player joins/leaves the server to Discord
 
-#### Discord Embed options
+* enabled: true # Did you enabled me?
+* discord_webhook_url: "" # Put that bad boy token here xd
+* discord_webhook_name: "MCDC" # What should be the custom name for the bad boi
+* discord_webhook_override: false # Should this override badboy? (Defualt will be false) 
+* discord_webhook_refresh: 10 #Delay in updating discord
+* send_console: true #Send console logs?
+* show_player_events: true #Tell when a player joins/leaves the server
+* enable_pings: true #Honor pinging from Minecraft chat in discord
+* discord_webhook_title: "" #Title for the badboy
+* discord_webhook_description: "" #Description? for this badboy [optional]
+* discord_webhook_color: "" #Say the embed color in hex code ex:- #ff0000 [optional]
+* discord_webhook_footer: "" # What should be the footer??? [optional]
 
-The following discord webhook embeds are not used by the official discord clients, but maybe used by others. These options maybe removed in the future when removed from the Discord API as they short be considered deprecated.
-
-* **discord_webhook_title** (string) - The embed title string to send to Discord
-* **discord_webhook_description** (string) - The embed description string to send to Discord
-* **discord_webhook_color** (hex color|number) - The embed color to send to Discord. Hex colors must start with a hashtag
-* **discord_webhook_footer** (string) - The embed footer to send to Discord
-
-## Known Issues
-
-This plugin will not work on servers hosted on specific devices that do not have 'cURL' installed (eg android phone).
 
 ## Final mention
 
-* Based off the plugins MCPEToDiscord by JaxkDev and DiscordMCPE by NiekertDev
+* kuatercraft#0062
+* [Our website](https://kuatercraft.ga/)
+* [Our DCbot](https://kuatercraftbot.tk/)
+* [Discord](https://discord.gg/zQ3SQ4zzN5/)
