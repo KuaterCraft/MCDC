@@ -1,7 +1,6 @@
 <img src="https://i.imgur.com/MxTeS95h.jpg" height="30%">
 
 # MCDC
-[![License](https://img.shields.io/github/license/nomadjimbob/MCPEDiscordRelay?color=green)](https://github.com/nomadjimbob/MCPEDiscordRelay/LICENSE)
 [![Version](https://img.shields.io/github/v/release/KuaterCraft/MCDC)](https://github.com/KuaterCraft/MCDC/releases/latest)
 [Discord](https://discord.gg/zQ3SQ4zzN5)
 
