@@ -1,0 +1,9 @@
+---
+name: MCDC
+main: KuaterCraft\MCDC\Main
+version: 1.0.0
+api:
+- 4.0.0
+author: KuaterCraft
+description: Send console message to a discord server
+...
