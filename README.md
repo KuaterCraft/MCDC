@@ -1,8 +1,11 @@
-<img src="https://i.imgur.com/MxTeS95h.jpg" height="30%">
+<img src="https://i.imgur.com/MxTeS95h.jpg" width="30%">
 
 # MCDC
+[![License](https://img.shields.io/github/license/KuaterCraft/MCDC?color=green&label=License)](https://github.com/KuaterCraft/MCDC/blob/main/LICENSE)
+[![](https://poggit.pmmp.io/shield.state/MCDC)](https://poggit.pmmp.io/p/MCDC)
 [![Version](https://img.shields.io/github/v/release/KuaterCraft/MCDC)](https://github.com/KuaterCraft/MCDC/releases/latest)
-[Discord](https://discord.gg/zQ3SQ4zzN5)
+[![Discord](https://img.shields.io/discord/923478312830001162?label=Discord)](https://discord.gg/zQ3SQ4zzN5)
+* Point to be noted:- Large commands output will not show !! example: having 20+ plugin and doing /? or /help output will not show
 
 
 ### Send console logs to your discord using webhook
@@ -41,10 +44,10 @@ Need help? join our [Discord](https://discord.gg/zQ3SQ4zzN5)
 * discord_webhook_title: "" #Title for the badboy
 * discord_webhook_description: "" #Description? for this badboy [optional]
 * discord_webhook_color: "" #Say the embed color in hex code ex:- #ff0000 [optional]
-* discord_webhook_footer: "" # What should be the footer??? [optional]
+* discord_webhook_footer: "" # What should be the footerjQuery32107105660293243186_1663501933827? [optional]
 
 
-## Final mention
+## kuatercraft#0062 socials
 
 * kuatercraft#0062
 * [Our website](https://kuatercraft.ga/)
