@@ -9,7 +9,7 @@ class SendAsync extends AsyncTask
 {
     private $webhook, $curlopts;
 
-    public function __construct($player, $webhook, $curlopts)
+    public function __construct($webhook, $curlopts)
     {
         $this->webhook = $webhook;
         $this->curlopts = $curlopts;
