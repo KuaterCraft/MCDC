@@ -19,7 +19,7 @@ use pocketmine\event\player\PlayerQuitEvent;
 class Main extends PluginBase implements Listener {
 
 	public $attachment				= null;
-	private $enabled				= false;
+	private $enabled				= true;
 	private $discordWebHookURL		= "";
 	private $discordWebHookName		= "";
 	public $discordWebHookOptions	= array();
@@ -38,7 +38,7 @@ class Main extends PluginBase implements Listener {
 		}
 		
 		if($this->enabled) {
-			$this->sendToDiscord("MCDC enabled");
+			$this->sendToDiscord("-------MCDC enabled-------");
 		}
 	}
 	
@@ -46,17 +46,6 @@ class Main extends PluginBase implements Listener {
 	public function onDisable(): void {
 		$this->endTasks();
 		$this->enabled = false;
-	}
-	
-	
-	public function onCommand(CommandSender $sender, Command $command, string $label, array $args) : bool{
-		switch($command->getName()){
-			case "version":
-				$sender->sendMessage("1.0.9");
-				return true;
-			default:
-				return false;
-		}
 	}
 	
 
@@ -109,31 +98,6 @@ class Main extends PluginBase implements Listener {
 		if($prefixMatch) {
 			$this->discordWebHookURL = $url;
 			$this->discordWebHookName = $this->getConfig()->get("discord_webhook_name", "MCDC");
-		
-			$embedOption = $this->getConfig()->get("discord_webhook_title", "");
-			if($embedOption != "") {
-				$this->discordWebHookOptions["title"] = $embedOption;
-			}
-
-			$embedOption = $this->getConfig()->get("discord_webhook_description", "");
-			if($embedOption != "") {
-				$this->discordWebHookOptions["description"] = $embedOption;
-			}
-
-			$embedOption = $this->getConfig()->get("discord_webhook_color", "");
-			if($embedOption != "") {
-				if(substr($embedOption, 1, 1) == '#') {
-					$embedOption = hexdec($embedOption);
-				} else {
-					$embedOption = intval($embedOption);
-				}
-				$this->discordWebHookOptions["color"] = $embedOption;
-			}
-
-			$embedOption = $this->getConfig()->get("discord_webhook_footer", "");
-			if($embedOption != "") {
-				$this->discordWebHookOptions["footer"] = $embedOption;
-			}
       
       $this->discordWebHookOptions["enable_pings"] = ($this->getConfig()->get("enable_pings", true) === true);
 
