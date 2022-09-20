@@ -10,7 +10,7 @@ discord_webhook_name: "MCDC"
 # What should be the custom name for the bad boi
 discord_webhook_override: false
 #Should this override badboy? (Defualt will be false) 
-discord_webhook_refresh: 10 
+discord_webhook_refresh: 1
 # Delay in updating discord
 send_console: true 
 # Send console logs?
@@ -18,12 +18,4 @@ show_player_events: true
 # Tell when a player joins/leaves the server
 enable_pings: true 
 # Honor pinging from Minecraft chat in discord
-discord_webhook_title: "" 
-# Title for the badboy
-discord_webhook_description: "" 
-# Description? for this badboy [optional]
-discord_webhook_color: "" 
-# Say the embed color in hex code ex:- #ff0000 [optional]
-discord_webhook_footer: "" 
-# What should be the footer??? [optional]
 ...
