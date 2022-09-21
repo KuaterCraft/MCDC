@@ -14,15 +14,15 @@ class Broadcast extends Task {
     public function onRun(): void {
         if($this->main->getEnabled() && $this->main->attachment != null) {
             $stream = $this->main->attachment->clearStream();
-            $this->sendToDiscord("nolog", $stream, $this->main->discordWebHookOptions);
+            $this->sendToDiscord($stream, $this->main->discordWebHookOptions);
         }
     }
 
-    public function sendToDiscord(string $player = "nolog", string $msg = "", array $options = []) {
+    public function sendToDiscord(string $msg = "", array $options = []) {
         $curlopts = [
             "content"    => $msg,
             "username"	=> $this->main->getDiscordWebHookName()
         ];
-        $this->main->getServer()->getAsyncPool()->submitTask(new SendAsync($player, $this->main->getDiscordWebHookURL(), serialize($curlopts)));
+        $this->main->getServer()->getAsyncPool()->submitTask(new SendAsync($this->main->getDiscordWebHookURL(), serialize($curlopts)));
     }
 }
